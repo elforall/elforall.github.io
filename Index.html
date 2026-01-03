@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ELForAll</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+
+    if (lang.startsWith('pt')) {
+      window.location.href = 'pt/';
+    } else if (lang.startsWith('es')) {
+      window.location.href = 'es/';
+    } else {
+      window.location.href = 'en/';
+    }
+  </script>
+</head>
+<body>
+  <p>Loading...</p>
+</body>
+</html>
