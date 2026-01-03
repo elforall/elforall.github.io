@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ProDentim | ELForAll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ícone do carrinho -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* MARCA D’ÁGUA REPETIDA NO FUNDO */
+            background-color: #ffffff;
+            background-image: repeating-linear-gradient(
+                -45deg,
+                rgba(170, 210, 220, 0.25),
+                rgba(170, 210, 220, 0.25) 1px,
+                transparent 1px,
+                transparent 80px
+            );
+        }
+
+        /* texto da marca d’água */
+        body::before {
+            content: "ELForAll   ELForAll   ELForAll   ELForAll   ELForAll";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            font-size: 14px;
+            color: rgba(170, 210, 220, 0.35);
+            transform: rotate(-30deg);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .product-box {
+            max-width: 320px;
+            padding: 20px;
+        }
+
+        .product-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .buy-section {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .buy-button {
+            background: #1a73e8;
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s ease, background 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background: #1558b0;
+            transform: scale(1.05);
+        }
+
+        .buy-text {
+            font-size: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="product-box">
+
+            <!-- IMAGEM CENTRAL -->
+            <img src="img/product.png" alt="ProDentim Product">
+
+            <!-- BOTÃO DE AFILIADO -->
+            <div class="buy-section">
+                <a href="https://prodentim24.com/text.php#aff=EvertonOG" class="buy-button" target="_blank">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Buy Now
+                </a>
+                <span class="buy-text">Buy from the official website</span>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
