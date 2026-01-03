@@ -2,56 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ELForAll – Official Product</title>
+    <title>ProDentim | ELForAll</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Font Awesome (shopping cart icon) -->
+    <!-- Ícone do carrinho -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
             margin: 0;
+            height: 100vh;
             font-family: Arial, Helvetica, sans-serif;
             background: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
+            position: relative;
         }
 
-        /* Watermark */
-        body::before {
-            content: "ELForAll";
+        /* Marca pequena no fundo */
+        .brand-bg {
             position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-30deg);
-            font-size: 120px;
-            color: rgba(180, 220, 230, 0.25); /* ice blue */
+            bottom: 15px;
+            right: 20px;
+            font-size: 14px;
+            color: rgba(160, 210, 220, 0.6); /* azul gelo */
             z-index: 0;
-            white-space: nowrap;
-            pointer-events: none;
         }
 
         .container {
-            position: relative;
             z-index: 1;
             text-align: center;
-            padding: 20px;
         }
 
-        .product-image img {
-            max-width: 280px;
-            width: 100%;
+        .product-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            max-width: 320px;
+        }
+
+        .product-box h1 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .product-box img {
+            max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         .buy-section {
             margin-top: 25px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
         }
@@ -59,16 +65,14 @@
         .buy-button {
             background: #1a73e8;
             color: #fff;
-            border: none;
             padding: 14px 22px;
+            border-radius: 10px;
+            text-decoration: none;
             font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 10px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            text-decoration: none;
+            transition: transform 0.2s ease, background 0.3s ease;
         }
 
         .buy-button:hover {
@@ -77,33 +81,30 @@
         }
 
         .buy-text {
-            font-size: 16px;
+            font-size: 15px;
             color: #333;
-            font-weight: 500;
-        }
-
-        @media (max-width: 480px) {
-            body::before {
-                font-size: 70px;
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="product-image">
-            <!-- Replace the image link with your own hosted image if needed -->
-            <img src="..img/IMG_4148.png" alt="Product Image">
-        </div>
+    <!-- Nome pequeno fora da imagem -->
+    <div class="brand-bg">ELForAll</div>
 
-        <div class="buy-section">
-            <!-- Replace # with your affiliate link -->
-            <a href="#" class="buy-button" target="_blank">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Buy Now
-            </a>
-            <span class="buy-text">Buy from the official website</span>
+    <div class="container">
+        <div class="product-box">
+            <h1>ProDentim</h1>
+
+            <!-- IMAGEM -->
+            <img src="img/IMG_4148.png" alt="ProDentim Product">
+
+            <div class="buy-section">
+                <a href="#" class="buy-button" target="_blank">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Buy Now
+                </a>
+                <span class="buy-text">Buy from the official website</span>
+            </div>
         </div>
     </div>
 
