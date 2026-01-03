@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>ELForAll | Official Product</title>
+<title>ELForAll | Official Website</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,88 +12,127 @@ body {
     margin: 0;
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+    background: hsl(103, 97%, 86%);
     overflow: hidden;
 }
 
-/* MARCA D’ÁGUA DE TEXTO REPETIDA */
-body::before {
-    content: "ELForAll     ELForAll     ELForAll     ELForAll     ELForAll";
+/* FUNDO COM MARCA D’ÁGUA CONTÍNUA */
+.watermark {
     position: fixed;
-    inset: -50%;
-    font-size: 12px;
-    color: rgba(170, 210, 220, 0.28); /* azul gelo */
+    margin-top: -25%;
+    inset: -25%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 35px;
     transform: rotate(-30deg);
     pointer-events: none;
-    white-space: nowrap;
-    line-height: 80px;
+    z-index: 0;
 }
 
+.watermark span {
+    font-size: 12px;
+    color: rgba(160, 210, 225, 0.35); /* azul gelo */
+    white-space: nowrap;
+    
+}
+
+/* CONTEÚDO */
 .container {
     position: relative;
     z-index: 1;
-    text-align: center;
-    padding: 20px;
-}
-
-.product-box img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.buy-section {
-    margin-top: 25px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
+    text-align: center;
 }
 
-.buy-button {
-    background: #1a73e8;
+.content {
+    max-width: 520px;
+    padding: 20px;
+}
+
+.product img {
+    max-width: 800px;
+    width: 100%;
+}
+
+/* BOTÃO */
+.buy-btn {
+    margin: 20px auto 10px;
+    background: #7bbf2a;
     color: #fff;
-    padding: 14px 22px;
-    border-radius: 10px;
+    padding: 20px 35px;
+    border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
-    display: flex;
+    font-size: 25px;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
+    animation: pulse 1.6s infinite;
     transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.buy-button:hover {
-    background: #1558b0;
+.buy-btn:hover {
+    background: #5fa21f;
     transform: scale(1.05);
 }
 
-.buy-text {
-    font-size: 15px;
-    color: #333;
+/* SELOS */
+.badges {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    flex-wrap: wrap;
+}
+
+.badges img {
+    width: 104px;
+    opacity: 0.9;
+}
+@keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(40,167,69,0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(40,167,69,0); }
+      100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); }
 }
 </style>
 </head>
 
 <body>
 
+<!-- MARCA D’ÁGUA -->
+<div class="watermark">
+    <!-- repetição suficiente para preencher a tela -->
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+    <span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span><span>ELForAll</span>
+</div>
+
 <div class="container">
-    <div class="product-box">
+    <div class="content">
 
-        <img src="img/product.png" alt="Product Image">
+        <!-- PRODUTO -->
+        <div class="product">
+            <img src="/img/product.png" alt="ProDentim">
+        </div>
 
-        <div class="buy-section">
-            <a href="SEU_LINK_DE_AFILIADO_AQUI" class="buy-button" target="_blank">
-                <i class="fa-solid fa-cart-shopping"></i>
-                Buy Now
-            </a>
-            <span class="buy-text">Buy from the official website</span>
+        <!-- BOTÃO AFILIADO -->
+        <a href="https://prodentim24.com/text.php#aff=EvertonOG" class="buy-btn" target="_blank">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Buy from the official website
+        </a>
+
+        <!-- SELOS -->
+        <div class="badges">
+            <img src="/img/gmp.png" alt="GMP Certified">
+            <img src="/img/fda.png" alt="FDA Approved">
+            <img src="/img/natural.png" alt="100% Natural">
+            <img src="/img/madeusa.png" alt="Made in USA">
+            <img src="/img/gmo.png" alt="GMO Free">
         </div>
 
     </div>
