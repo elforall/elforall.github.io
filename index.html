@@ -8,12 +8,11 @@
   <script>
     const lang = navigator.language || navigator.userLanguage;
 
-    if (lang.startsWith('pt')) {
+    if { window.location.href = 'en/';
+    } else if (lang.startsWith('pt')) {
       window.location.href = 'pt/';
     } else if (lang.startsWith('es')) {
       window.location.href = 'es/';
-    } else {
-      window.location.href = 'en/';
     }
   </script>
 </head>
