@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ELForAll – Smart Solutions for Everyone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    #lang-banner {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      background: #111;
+      color: #fff;
+      padding: 12px 16px;
+      border-radius: 6px;
+      font-size: 14px;
+      display: none;
+      z-index: 9999;
+    }
+
+    #lang-banner button {
+      margin-left: 10px;
+      background: #0d6efd;
+      border: none;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body style="font-family: Arial, sans-serif; padding:40px;">
+
+  <div id="lang-banner">
+    This site is available in your language.
+    <button id="switch-lang">Switch</button>
+  </div>
+
+  <h1>Welcome to ELForAll</h1>
+  <p>
+    We curate digital and physical solutions designed to make life easier.
+  </p>
+
+  <script>
+    (function () {
+      const lang = (navigator.language || 'en').toLowerCase();
+      const banner = document.getElementById('lang-banner');
+      const button = document.getElementById('switch-lang');
+
+      // Se NÃO for inglês, mostra o banner
+      if (!lang.startsWith('en')) {
+        banner.style.display = 'block';
+
+        if (lang.startsWith('pt')) {
+          button.onclick = () => window.location.href = '/pt/';
+        } else if (lang.startsWith('es')) {
+          button.onclick = () => window.location.href = '/es/';
+        } else {
+          // Outros idiomas → mantém inglês (botão apenas fecha)
+          button.textContent = 'Keep English';
+          button.onclick = () => banner.style.display = 'none';
+        }
+      }
+    })();
+  </script>
+
+</body>
+</html>
