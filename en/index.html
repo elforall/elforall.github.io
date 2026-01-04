@@ -119,6 +119,15 @@ footer em {
     font-style: italic;
     opacity: 0.9;
 }
+    <!-- EFEITO VISUAL AO PASSAR O MOUSE -->
+.product a img {
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+.product a img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+}
 </style>
 </head>
 
@@ -140,7 +149,9 @@ footer em {
 
         <!-- PRODUTO -->
         <div class="product">
+        <a href="https://prodentim24.com/text.php#aff=EvertonOG" class="buy-btn" target="_blank">
             <img src="/img/product.png" alt="ProDentim">
+        </a>
         </div>
 
         <!-- BOTÃO AFILIADO -->
