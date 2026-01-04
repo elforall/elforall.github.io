@@ -13,7 +13,8 @@ body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background: hsl(135, 23%, 54%);
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* FUNDO COM MARCA D’ÁGUA CONTÍNUA */
@@ -45,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-botom: 120px;
 }
 
 .content {
@@ -96,6 +98,27 @@ body {
       70% { box-shadow: 0 0 0 15px rgba(143, 195, 155, 0); }
       100% { box-shadow: 0 0 0 0 rgba(40,167,69,0); }
 }
+    /* RODAPÉ – AVISO LEGAL */
+footer {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.35);
+    color: #f1f1f1;
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 20px 15px;
+    text-align: center;
+}
+
+footer p {
+    max-width: 900px;
+    margin: 0 auto 10px;
+}
+
+footer em {
+    font-style: italic;
+    opacity: 0.9;
+}
 </style>
 </head>
 
@@ -139,4 +162,16 @@ body {
 </div>
 
 </body>
+    <footer>
+    <p>
+        Statements on this website have not been evaluated by the Food and Drug Administration.
+        Products are not intended to diagnose, treat, cure or prevent any disease.
+        If you are pregnant, nursing, taking medication, or have a medical condition,
+        consult your physician before using our products.
+    </p>
+
+    <p>
+        <em>*For international shipping (outside of the United States), shipping fees will apply.</em>
+    </p>
+</footer>
 </html>
